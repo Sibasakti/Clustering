@@ -11,7 +11,7 @@ from sklearn.cluster import KMeans
 wcss = []
 
 for i in range(1, 11):
-    kmeans = KMeans(n_clusters = i,init="k-means++")
+    kmeans = KMeans(n_clusters = i,init="k-means++",random_state = 0)
     kmeans.fit(X)
     wcss.append(kmeans.inertia_)
 
